@@ -48,6 +48,7 @@
 
 
             //prueba problema4....
+
             // 1. Instanciamos la clase del problema
             Problema4 promedioService = new Problema4();
 
@@ -65,6 +66,23 @@
             // Debería retornar 0.
             double caso3 = promedioService.CalcularPromedio(null, null, null);
             Console.WriteLine($"Caso 3 (null, null, null) -> Esperado: 0 | Resultado: {caso3}");
+
+
+
+
+
+            //prueba problema5....
+
+
+            Problema5 p5 = new Problema5();
+
+            // Caso Minorista: 1000 debería dar 1000
+            Sale ventaMinorista = new RetailSale { Amount = 1000 };
+            Console.WriteLine($"Venta Minorista: {p5.ObtenerImporteFinal(ventaMinorista)}");
+
+            // Caso Mayorista: 1000 debería dar 900 (10% de descuento)
+            Sale ventaMayorista = new WholesaleSale { Amount = 1000 };
+            Console.WriteLine($"Venta Mayorista: {p5.ObtenerImporteFinal(ventaMayorista)}");
         }
 
 
