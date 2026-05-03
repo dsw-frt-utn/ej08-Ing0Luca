@@ -43,6 +43,28 @@
 
             Console.WriteLine("Descripción de miProducto: " + miProducto.Descripcion);
             // Debería ser 'Copia Modificada' porque se pasó por REFERENCIA
+
+
+
+
+            //prueba problema4....
+            // 1. Instanciamos la clase del problema
+            Problema4 promedioService = new Problema4();
+
+            // 2. CASO 1: Mezcla de notas válidas, nulas y fuera de rango
+            // Debería tomar solo el 8 y el 10. Promedio: 9.
+            double caso1 = promedioService.CalcularPromedio(8, null, 10);
+            Console.WriteLine($"Caso 1 (8, null, 10) -> Esperado: 9 | Resultado: {caso1}");
+
+            // 3. CASO 2: Notas fuera de rango (deben ignorarse)
+            // Debería tomar solo el 7. Promedio: 7.
+            double caso2 = promedioService.CalcularPromedio(7, -5, 20);
+            Console.WriteLine($"Caso 2 (7, -5, 20) -> Esperado: 7 | Resultado: {caso2}");
+
+            // 4. CASO 3: Todas las notas nulas
+            // Debería retornar 0.
+            double caso3 = promedioService.CalcularPromedio(null, null, null);
+            Console.WriteLine($"Caso 3 (null, null, null) -> Esperado: 0 | Resultado: {caso3}");
         }
 
 
