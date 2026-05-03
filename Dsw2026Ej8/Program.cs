@@ -4,6 +4,11 @@
     {
         static void Main(string[] args)
         {
+            // prueba problema1....
+
+
+
+
             // prueba problema2...
 
             var ej2 = new Problema2();
@@ -83,6 +88,21 @@
             // Caso Mayorista: 1000 debería dar 900 (10% de descuento)
             Sale ventaMayorista = new WholesaleSale { Amount = 1000 };
             Console.WriteLine($"Venta Mayorista: {p5.ObtenerImporteFinal(ventaMayorista)}");
+
+
+
+            //prueba problema6.....
+
+            Problema6 p6 = new Problema6();
+
+            // Ejemplo del enunciado: "ab 123 x " => "AB-123-X"
+
+            string resultado1 = p6.NormalizarCodigoProducto("ab 123 x ");
+            Console.WriteLine($"Resultado: '{resultado1}'");
+
+            // Prueba con null
+            string resultado2 = p6.NormalizarCodigoProducto(null);
+            Console.WriteLine($"Resultado Null: {resultado2}");
         }
 
 
